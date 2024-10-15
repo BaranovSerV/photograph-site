@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comforter+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box; /* Учитываем padding и border в ширину элементов */
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    flex: 1;
+}
+
+#main-header{
+    display: flex;
+    width: 100%;
+    height: 100vb;
+    margin-top: 0;
+    /* Градиент поверх фонового изображения */
+
+    background-size: cover; /* Масштабировать фон, чтобы он заполнял элемент */
+    background-position: center; /* Позиционирование по правому краю */
+    
+    /* Убрано background-attachment: fixed для отключения параллакса */
+    
+    color: white;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    font-family: 'Raleway', sans-serif;
+}
+
+#header{
+    display: flex;
+    width: 100%;
+    height: 10vb;
+    margin-top: 0;
+    /* Градиент поверх фонового изображения */
+     /* Убрано background-attachment: fixed для отключения параллакса */
+    
+    background-color: #282828;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    font-family: 'Raleway', sans-serif;
+}
+
+.content-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.menu-header{
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-right: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.name-author{
+    width: 30%;
+    color: white;
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+
+.menu{
+    width: 70%;
+    margin-right: 0px;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    flex-direction: row;
+    font-size: 1rem;
+}
+
+.icons{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#icons-cur{
+    font-size: 28px;
+    padding: 8px;
+}
+
+.made-project{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-style: normal;
+}
+
+footer{
+    width: 100%;
+    bottom: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.link-menu {
+    text-decoration: none; /* Убираем подчеркивание */
+    position: relative; /* Для работы с псевдоэлементами */
+    font-size: 20px;
+    padding: 3px;
+    color: white;
+    right: 0;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.link-menu::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; /* Толщина underline */
+    bottom: -2px; /* Расположение линии ближе к тексту */
+    left: 50%; /* Начало с середины */
+    background-color: white;
+    transition: width 0.4s ease, left 0.4s ease; /* Анимация плавного расширения */
+}
+
+.link-menu:hover::before {
+    width: 100%; /* Полная длина подчеркивания */
+    left: 0; /* Раздвигаем от середины */
+}
+
+.link-menu:hover {
+    color: white; /* Цвет при наведении */
+}
+
+.link-menu:active{
+    color: rgb(175, 167, 167);
+}
+
+.name-item{
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.menu-name{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+.menu-mobile-block{
+    display: none;
+}
+
+
+
+.icons-link{
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white;
+    background: none; /* Убирает фон при активном состоянии */
+    outline: none;    /* Убирает обводку при нажатии */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.line-select{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.next-line{
+    width: 25px; /* Ширина линий */
+    height: 2px; /* Высота линий */
+    background-color: white; /* Цвет линий */
+    margin: 5px 0; /* Отступ между линиями */
+    transition: all 0.3s ease; /* Плавный переход */
+}
+
+.box-line{
+    padding: 20px;
+    font-size: 65px;
+}
+
+.content{
+    display: flex;
+    padding: 20px;
+}
+
+.information-author{
+    display: flex;
+    flex-direction: row;
+}
+
+.upper-text{
+    text-align: left;
+    padding: 10px;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.lower-text{
+    text-align: left;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.photo-author{
+    display: flex;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+
+}
+
+.service-box {
+    display: flex;
+    background-color: black;
+    color: white;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-box {
+    width: 100%;
+    background-color:black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Добавим отступы между элементами */
+}
+
+.title-box {
+    padding: 40px;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.box-item {
+    padding: 30px;
+    display: flex;
+    width: 30%; /* Задаем ширину для каждого блока */
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+}
+
+.image-item {
+    display: flex;
+    justify-content: center; /* Центрируем изображение */
+}
+
+.image-item img {
+    max-width: 100%;   /* Ограничиваем максимальную ширину изображения по ширине родительского элемента */
+    max-height: 500px; /* Задаём максимальную высоту изображения */
+    object-fit: cover; /* Позволяет сохранить соотношение сторон изображения и корректно его обрезать */
+    width: auto;
+    height: auto;
+}
+
+.contacts-box{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.title-contacts{
+    margin-right: 20%;
+    margin-left: 20%;
+    display: flex;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+}
+
+.number-text{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.number{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button-box{
+    padding: 40px;
+}
+
+.button-contacts{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    transition: background-color 0.3s ease;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    width: 400px;
+    height: 60px;
+}

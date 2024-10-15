@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Services</title>
+</head>
+
+<body>
+    <header id="header" class="">
+        <div class="content-header">
+            <div class="header-color">
+                <div class="menu-header">
+                    <div id="name-author" class="name-author">
+                        Ольга Парфенова
+                    </div>
+                    <div id="menu" class="menu">
+                        <div class="menu-name">
+                            <a href="index.html" class="link-menu" id='main-link'>Главная</a>
+                        </div>
+                        <div class="menu-name">
+                            <a href="index.html" class="link-menu">Портфолио</a>
+                        </div>
+                        <div class="menu-name">
+                            <a href="services.html" class="link-menu">Услуги</a>
+                        </div>
+                        <div class="menu-name">
+                            <a href="index.html" class="link-menu">Отзывы</a>
+                        </div>
+                        <div class="menu-name">
+                            <a href="index.html" class="link-menu">Контакты</a>
+                        </div>
+                    </div>
+                    <div class="menu-mobile">
+                        <div class="burger" id="burger">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div id="menu-mobile-block" class="menu-mobile-block">
+            <div class="menu-mobile-link-name">
+                <div class="menu-mobile-name">
+                    <a href="index.html" class="name-item">Главная</a>
+                </div>
+                <div class="menu-mobile-name">
+                    <div id="profile-box-link" class="name-item">
+                        <div id="profile-form-name" class="profile-form-name">
+                            Портфолио
+                        </div>
+                        <div id="profile-form-icon" class="profile-form-icon">
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                    </div>
+                    <div id="profile-box" class="profile-box">
+                        <div class="profile-box-item">
+                            <a href="#" class='profile-link'>Крещение</a>
+                        </div>
+                        <div class="profile-box-item">
+                            <a href="#" class='profile-link'>Свадьба</a>
+                        </div>
+                        <div class="profile-box-item">
+                            <a href="#" class='profile-link'>Венчание</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-mobile-name">
+                    <a href="services.html" class="name-item">Услуги</a>
+                </div>
+                <div class="menu-mobile-name">
+                    <a href="#" class="name-item">Отзывы</a>
+                </div>
+                <div class="menu-mobile-name">
+                    <a href="#" class="name-item">Контакты</a>
+                </div>
+                <div class="menu-mobile-name">
+                    <a href="#" class="name-item">
+                        <i id="icons-cur" class='bx bxl-telegram'></i>
+                    </a>
+                    <a href="#" class="name-item">
+                        <i id="icons-cur" class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="#" class="name-item">
+                        <i id="icons-cur" class='bx bxl-whatsapp'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="service-box">
+            <div class="container-box">
+                <div class="box-item">
+                    <div class="image-item">
+                        <img src="image/IMG_0261.JPG" alt="">
+                    </div>
+                    <div class="type-content-text">
+
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="image-item">
+                        <img src="image/photo_2024-10-15_11-03-21.jpg" alt="">
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="image-item">
+                        <img src="image/photo_2024-10-15_11-03-21.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contacts-box">
+            <div class="contacts-text-box">
+                <div class="title-contacts">
+                    Свадебный и семейный фотограф в Москве и Московской области
+                </div>
+                <div class="number-text">
+                    Для связи со мной напишите мне или позвоните по телефону.
+                </div>
+                <div class="number">
+                    +7 (926) 324-29-67
+                </div>
+            </div>
+            <div class="button-box">
+                <button class="button-contacts">
+                    НАПИСАТЬ В WHATSAPP
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="icons">
+                <a href="#" class="icons-link">
+                    <i id="icons-cur" class='bx bxl-telegram'></i>
+                </a>
+                <a href="#" class="icons-link">
+                    <i id="icons-cur" class='bx bxl-instagram'></i>
+                </a>
+                <a href="#" class="icons-link">
+                    <i id="icons-cur" class='bx bxl-whatsapp'></i>
+                </a>
+            </div>
+            <div translate="no" class="made-project">
+                made by: garandamslippers
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const burger = document.getElementById('burger');
+    const menuMobileBlock = document.getElementById('menu-mobile-block');
+    const name_author = document.getElementById('name-author');
+
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active'); // Активируем бургер
+        menuMobileBlock.classList.toggle('active'); // Активируем мобильное меню
+        name_author.classList.toggle('active')
+    });</script>
+
+</html>

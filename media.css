@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@media (max-width: 480px) {
+    .header {
+        display: flex; /* Пример адаптивного изменения разметки */
+        flex-direction: row; 
+    }
+    .menu {
+        display: none; /* Скрыть главное меню на мобильных */
+    }
+    .name-author{
+        font-size: 30px;
+        width: 80%;
+    }
+    .menu-mobile {
+        display: flex;
+    }
+
+    .header-color{
+        width: 100%;
+        box-sizing: border-box;
+        background-color: black;
+        position: fixed;
+    }
+
+    .menu-mobile-block {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 60px);
+        background-color: black; /* Темный фон */
+        color: white;
+        flex-direction: column;
+        justify-content:start;
+        align-items: flex-start; /* Выравнивание по левому краю */
+        z-index: 1000;
+        overflow: hidden;
+    }
+
+    .menu-mobile-block.active {
+        display: flex;
+        top: 60px;
+    }
+
+    .name-author.active{
+        display: none;
+    }
+
+    .menu-mobile-link-name{
+        padding-top: 80px;
+        padding-left: 20px;
+    }
+
+    .menu-mobile-name{
+        margin-left: 35px;
+        margin-bottom: 35px;
+        font-size: 24px;
+        transform: translateX(-200%); /* Начальная позиция за пределами экрана */
+        animation: slideIn 0.5s forwards; /* Анимация появления */
+    }
+
+    .name-item:active{
+        color:  rgb(175, 167, 167);;
+    }
+
+    .menu-mobile-name:nth-child(1) {
+        animation-delay: 0.08s;
+    }
+
+    .menu-mobile-name:nth-child(2) {
+        animation-delay: 0.16s;
+    }
+
+    .menu-mobile-name:nth-child(3) {
+        animation-delay: 0.24s;
+    }
+
+    .menu-mobile-name:nth-child(4) {
+        animation-delay: 0.32s;
+    }
+
+    .menu-mobile-name:nth-child(5) {
+        animation-delay: 0.4s;
+    }
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .name-item{
+        text-decoration: none; /* Убираем подчеркивание */
+        color: white;
+        background: none; /* Убирает фон при активном состоянии */
+        outline: none;    /* Убирает обводку при нажатии */
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Обновленные стили для фиксации бургера */
+    .burger, .burger-mobile {
+        position:absolute;
+        top: 25px;
+        right: 20px;
+        z-index: 2000; /* Чтобы бургер был выше меню */
+        cursor: pointer;
+        outline: none; /* Убирает контур */
+    }
+
+    .burger:focus, .burger-mobile {
+        outline: none; /* Убирает контур */
+    }
+
+    .burger.active, .burger-mobile {
+        background: none; /* Убирает фон при активном состоянии */
+        outline: none;    /* Убирает обводку при нажатии */
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .line {
+        width: 25px; /* Ширина линий */
+        height: 2px; /* Высота линий */
+        background-color: white; /* Цвет линий */
+        margin: 5px 0; /* Отступ между линиями */
+        transition: all 0.3s ease; /* Плавный переход */
+    }
+
+
+    .burger.active .line1{
+        transform: translateY(7px) rotate(45deg); /* Перемещаем и поворачиваем первую линию */
+    }
+    
+    .burger.active .line2{
+        opacity: 0; /* Скрываем среднюю линию */
+    }
+    
+    .burger.active .line3{
+        transform: translateY(-7px) rotate(-45deg); /* Перемещаем и поворачиваем третью линию */
+    }
+
+
+    .box-line{
+        padding: 8px;
+        font-size: 45px;
+    }
+    
+    .profile-box{
+        display: none;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    .profile-box.active{
+        display: flex;
+        flex-direction: column; /* Начальная позиция за пределами экрана */
+        transform: translateY(-10%);
+        animation: slideON 0.8s forwards;
+    }
+
+    #profile-form-icon.active{
+        transform: rotate(-180deg);
+    }
+
+    .profile-form-icon{
+        display: flex;
+        align-items: center;
+    }
+
+    .profile-item:nth-child(1) {
+        animation-delay: 1s;
+    }
+
+    .profile-box-item:nth-child(2) {
+        animation-delay: 0.16s;
+    }
+
+    .profile-box-item:nth-child(3) {
+        animation-delay: 0.24s;
+    }
+
+    @keyframes slideON {
+        0% {
+            opacity: 0;
+            transform: translateX(0);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+
+    #profile-box-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-box-item{
+        margin-top: 20px;
+    }
+
+    .profile-link{
+        font-family: "Cinzel", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+        background: none; /* Убирает фон при активном состоянии */
+        outline: none;    /* Убирает обводку при нажатии */
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .profile-link:active{
+        color: rgb(175, 167, 167);
+    }
+
+    .container-box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-item{
+        width: 100%;
+    }
+
+    .image-item img {
+        max-width: 100%;   /* Ограничиваем максимальную ширину изображения по ширине родительского элемента */ /* Задаём максимальную высоту изображения */
+        object-fit: cover; /* Позволяет сохранить соотношение сторон изображения и корректно его обрезать */
+        width: auto;
+        height: auto;
+    }
+
+    .title-contacts{
+        font-size: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .number-text{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .button-contacts{
+        width: 300px;
+        height: 60px;
+    }
+}
+
+@media (hover: hover) {
+    #icons-cur:hover{
+        color: rgb(175, 167, 167);
+    }
+}
+
+@media (hover: none) {
+    #icons-cur:active{
+        color: rgb(175, 167, 167);
+    }
+}
+
+@media (hover: hover) {
+    .box-line:hover{
+        color: rgb(175, 167, 167);
+    }
+}
+
+@media (hover: none) {
+    .box-line:active{
+        color: rgb(175, 167, 167);
+    }
+}
+
+@media (hover: hover) {
+    .button-contacts:hover{
+        background-color: rgb(175, 167, 167);
+    }
+}
+
+@media (hover: none) {
+    .button-contacts:active{
+        background-color: rgb(175, 167, 167);
+    }
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Photo Autor</title>
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="content-header">
+            <div class="header-color">
+                <div class="menu-header">
+                    <div id="name-author" class="name-author">
+                        Ольга Парфенова
+                    </div>
+                    <div id="menu" class="menu">
+                        <div class="menu-name">
+                            <a href="index.html" class="link-menu" id='main-link'>Главная</a>
+                        </div>
+                        <div class="menu-name">
+                            <a href="index.html" class="link-menu">Портфолио</a>
+                        </div>
+                        <div class="menu-name">
+                            <a href="services.html" class="link-menu">Услуги</a>
+                        </div>
+                        <div class="menu-name">
+                            <a href="index.html" class="link-menu">Отзывы</a>
+                        </div>
+                        <div class="menu-name">
+                            <a href="contacts.html" class="link-menu">Контакты</a>
+                        </div>
+                    </div>
+                    <div class="menu-mobile">
+                        <div class="burger" id="burger">
+                            <div class="line line1"></div>
+                            <div class="line line2"></div>
+                            <div class="line line3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line-select">
+                <div class="box-line" id="chevron-left">
+                    <i class='bx bx-chevron-left'></i>
+                </div>
+                <div class="box-line" id="chevron-right">
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div id="menu-mobile-block" class="menu-mobile-block">
+            <div class="menu-mobile-link-name">
+                <div class="menu-mobile-name">
+                    <a href="index.html" class="name-item">Главная</a>
+                </div>
+                <div class="menu-mobile-name">
+                    <div id="profile-box-link" class="name-item">
+                        <div id="profile-form-name" class="profile-form-name">
+                            Портфолио
+                        </div>
+                        <div id="profile-form-icon" class="profile-form-icon">
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                    </div>
+                    <div id="profile-box" class="profile-box">
+                        <div class="profile-box-item">
+                            <a href="#" class='profile-link'>Крещение</a>
+                        </div>
+                        <div class="profile-box-item">
+                            <a href="#" class='profile-link'>Свадьба</a>
+                        </div>
+                        <div class="profile-box-item">
+                            <a href="#" class='profile-link'>Венчание</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-mobile-name">
+                    <a href="services.html" class="name-item">Услуги</a>
+                </div>
+                <div class="menu-mobile-name">
+                    <a href="#" class="name-item">Отзывы</a>
+                </div>
+                <div class="menu-mobile-name">
+                    <a href="contacts.html" class="name-item">Контакты</a>
+                </div>
+                <div class="menu-mobile-name">
+                    <a href="#" class="name-item">
+                        <i id="icons-cur" class='bx bxl-telegram'></i>
+                    </a>
+                    <a href="#" class="name-item">
+                        <i id="icons-cur" class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="#" class="name-item">
+                        <i id="icons-cur" class='bx bxl-whatsapp'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--<div id="white-content" class="content">
+            <div class="about-content">
+                <div class="information-author">
+                    <div class="text-author">
+                        <div class="upper-text">Свадебный фотограф Ольга Парфенова</div>
+                        <div class="lower-text">
+                            Дорогие друзья! Рада приветствовать вас на своем сайте. Меня зовут Анна Глуховских. Я живу и
+                            работаю в Москве. Основные направления моей работы — свадебная съемка и вдумчивые портретные
+                            фотосессии.
+
+                            Особенности моей работы: я работаю в разговорном жанре, то есть много общаюсь, чтобы
+                            раскрепостить героев моих фотосессий, и чтобы фотосессия воспринималась как приключение.
+                        </div>
+                    </div>
+                    <div class="photo-author">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="icons">
+                <a href="#" class="icons-link">
+                    <i id="icons-cur" class='bx bxl-telegram'></i>
+                </a>
+                <a href="#" class="icons-link">
+                    <i id="icons-cur" class='bx bxl-instagram'></i>
+                </a>
+                <a href="#" class="icons-link">
+                    <i id="icons-cur" class='bx bxl-whatsapp'></i>
+                </a>
+            </div>
+            <div translate="no" class="made-project">
+                made by: garandamslippers
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const burger = document.getElementById('burger');
+    const menuMobileBlock = document.getElementById('menu-mobile-block');
+    const name_author = document.getElementById('name-author');
+
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active'); // Активируем бургер
+        menuMobileBlock.classList.toggle('active'); // Активируем мобильное меню
+        name_author.classList.toggle('active')
+    });
+
+    const profile = document.getElementById('profile-box-link');
+    const profile_menu = document.getElementById('profile-box');
+    const icon = document.getElementById('profile-form-icon');
+
+    profile.addEventListener('click', () => {
+        profile.classList.toggle('active');
+        profile_menu.classList.toggle('active');
+        icon.classList.toggle('active');
+    });
+
+    const images = [
+        'image/IMG_0261.JPG'
+    ];
+
+    // Селектор header
+    const header = document.querySelector('header');
+
+    // Изначальный индекс картинки
+    let currentIndex = 0;
+
+    // Функция для смены фона
+    function changeBackground() {
+        header.style.backgroundImage = `linear-gradient(rgba(50, 50, 50, 0.7), rgba(50, 50, 50, 0.7)), 
+                                        url(${images[currentIndex]})`;
+        header.style.backgroundSize = 'cover';
+        header.style.backgroundPosition = 'center';
+    }
+
+    // Функции для управления фоном
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length; // Следующее изображение
+        changeBackground();
+    }
+
+    function showPreviousImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; // Предыдущее изображение
+        changeBackground();
+    }
+
+    // Обработчики событий для стрелок
+    const chevronLeft = document.getElementById('chevron-left');
+    const chevronRight = document.getElementById('chevron-right');
+
+    chevronRight.addEventListener('click', showNextImage);
+    chevronLeft.addEventListener('click', showPreviousImage);
+
+    // Устанавливаем начальный фон
+    changeBackground();
+
+    // Запускаем смену фона каждые 60 секунд
+    setInterval(showNextImage, 60000); // 60 000 мс = 60 секунд
+</script>
+
+</html>
